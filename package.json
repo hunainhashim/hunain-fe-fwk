@@ -1,0 +1,15 @@
+{
+  "name": "hunain-fe-fwk-project",
+  "version": "1.0.0",
+  "description": "Practice Project To Learn How Framework Works",
+  "private": true,
+  "workspace": ["packages/runtime"],
+  "main": "index.js",
+  "scripts": {
+    "serve:examples": "npx http-server . -o ./examples/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

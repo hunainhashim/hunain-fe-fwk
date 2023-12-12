@@ -1,0 +1,21 @@
+{
+  "name": "hunain-fe-fwk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/hunain-fe-fwk.js",
+  "files": [
+    "dist/hunain-fe-fwk.js"
+  ],
+  "scripts": {
+    "prepack": "npm run build",
+    "build": "rollup -c",
+    "lint": "eslint src", "lint:fix": "eslint src --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.55.0"
+  }
+}
