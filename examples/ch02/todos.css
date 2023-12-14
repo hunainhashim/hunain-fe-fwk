@@ -1,0 +1,41 @@
+#wrapper-container{
+    margin: auto;
+    width: 50%;
+    padding: 40px;
+}
+#main-heading{
+    text-align: center;
+}
+.input-todo{
+    border-radius: 10px;
+    height: 40px;
+    width: 250px;
+}
+.button{
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 8px;
+    background-color: lawngreen;
+}
+#new-todo{
+    text-align: center;
+}
+.hide{
+    display: none;
+}
+.todo-text-area{
+    margin: 10px;
+    outline: 0px solid transparent;
+}
+.todo-text-box{
+    width: 200px;
+    min-height: 38px;
+    border: 2px solid;
+    border-radius: 10px;
+}
+.todo-wrapper{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
