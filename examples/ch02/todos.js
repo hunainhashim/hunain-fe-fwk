@@ -5,6 +5,7 @@ var addToDoButton = document.getElementById('new-todo-button');
 var toDoListContainer = document.getElementById('todo-list-container');
 var todoValue = null;
 var isSaveClicked = false;
+var todos = [];
 
 newToDoInput.oninput = updateAddButtonState;
 newToDoInput.addEventListener('keypress', function (e){
@@ -14,11 +15,16 @@ newToDoInput.addEventListener('keypress', function (e){
 addToDoButton.onclick = addButtonOnClick;
 
 function addButtonOnClick(){
-    if(newToDoInput.value){
+    if(todos.indexOf(newToDoInput.value) === -1){
+        todos.push(newToDoInput.value);
+        readTodo(newToDoInput.value);
         addToDoButton.disabled = true;
         createToDos(newToDoInput.value);
         newToDoInput.value = null;
+    }else{
+        alert("Todo Already Exist in the List!")
     }
+
 }
 
 function updateAddButtonState(){
@@ -93,5 +99,17 @@ function onSavedClicked(){
 }
 
 function onDoneClicked(ele){
-    ele.parentNode.remove();
+    ele.classList.add('hide');
+    var toDoWrapperElement = ele.parentNode;
+    var textBox = toDoWrapperElement.getElementsByClassName('todo-text-box')[0];
+    var textArea = textBox.firstChild;
+    textBox.style.textDecoration = "line-through";
+    textArea.contentEditable = 'false';
+    textArea.onclick = null
+}
+
+function readTodo(msg){
+    var speechMessage = new SpeechSynthesisUtterance();
+    speechMessage.text = msg;
+    speechSynthesis.speak(speechMessage);
 }
